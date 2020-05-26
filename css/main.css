@@ -1,0 +1,190 @@
+body,
+html {
+      margin: 0;
+      padding: 0;
+      min-width: 100%;
+      min-height: 100%;
+}
+
+body {
+  font: 16px/1.2em 'Orbitron', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer,
+section,
+div {
+     box-sizing: border-box;
+}
+
+/* making webpage able to be adjusted */
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+/* header */
+
+.header {
+  max-width: 100%;
+  border-bottom: 4px solid #7d97ad;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100px;
+}
+
+.logo {
+  order: 0;
+  margin-top: 10px;
+}
+
+/* aligns title-main to the right */
+
+.title-main {
+  display: flex;
+  flex-flow: column;
+  order: 1;
+  font-size: 13px;
+}
+
+.sub-title {
+  max-width: 100%;
+  text-align: right;
+  margin: 0;
+}
+
+/* Main pic and content */
+
+main {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* all images */
+
+img {
+  max-width: 100%;
+}
+
+/* about */
+
+p {
+  text-align: center;
+}
+
+.number-1,
+.number-2,
+.number-3 {
+           padding: 5px;
+}
+
+.welcome,
+.about,
+.about-me {
+           text-align: center;
+}
+
+/* flex-wrap for pictures */
+
+.things-i-do {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+
+footer {
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none ;
+  color: #333;
+  padding: 1.5em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Breakpoint 492px */
+
+@media screen and (max-width: 492px) {
+  footer li {
+    display: block;
+    margin: 0 1em;
+  }
+}
+
+/* Breakpoint 600px */
+
+@media screen and (min-width: 600px) {
+  .number-1 {
+    order: 0;
+    width: 50%;
+  }
+
+  .number-2 {
+    order: -1;
+    width: 50%;
+  }
+
+  .number-3 {
+    order: 1;
+  }
+}
+
+/* Breakpoint 800px */
+
+@media screen and (min-width: 800px) {
+  .number-1 {
+    width: 33%;
+  }
+
+  .number-2 {
+    width: 33%;
+  }
+
+  .number-3 {
+    width: 33%;
+  }
+}
+
+  /* Add padding after 1000px */
+
+@media screen and (min-width: 1000px) {
+  main,
+  header,
+  footer {
+          width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+  }
+
+  /* centers everything */
+
+  .wrapper {
+    align-items: center;
+  }
+}
